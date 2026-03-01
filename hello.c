@@ -1,15 +1,18 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<string.h>
+struct student
+{
+    char name[10];
+    int RollNo;
+    float marks;
+};
 int main(){
-    int arr[3][3]={{1,2,3},{4,5,6},{7,8,9}};
-    for(int i =0;i<3;i++){
-        for(int j=0;j<3;j++){
-            if(i==0 || i==2){
-                printf("%d ",arr[i][j]);
-            }else if (j==3-i-1){
-                printf("%d ",arr[i][j]);
-            }else{
-                printf(" ");
-            }
-        }printf("\n");
+    struct student s1[5];
+    for(int i=0;i<5;i++){
+        printf("Enter your name");
+        scanf("%s",s1[i].name);
     }
+    return 0;
 }
+
+
